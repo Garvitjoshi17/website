@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garvit Joshi - Portfolio</title>
+    <meta name="description" content="Garvit Joshi - Game Developer, App Developer & Web Developer from India. 9th standard student with 10+ published apps and 3+ years of experience.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <span onclick="scrollToSection('home')">Garvit Joshi</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop">
+                    <button onclick="scrollToSection('home')" class="nav-link">Home</button>
+                    <button onclick="scrollToSection('about')" class="nav-link">About</button>
+                    <button onclick="scrollToSection('skills')" class="nav-link">Skills</button>
+                    <button onclick="scrollToSection('projects')" class="nav-link">Projects</button>
+                    <button onclick="scrollToSection('contact')" class="nav-link">Contact</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="nav-mobile-btn">
+                    <button onclick="toggleMobileMenu()" id="mobile-menu-toggle">
+                        <i class="fas fa-bars" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="nav-mobile">
+                <button onclick="scrollToSection('home')" class="nav-mobile-link">Home</button>
+                <button onclick="scrollToSection('about')" class="nav-mobile-link">About</button>
+                <button onclick="scrollToSection('skills')" class="nav-mobile-link">Skills</button>
+                <button onclick="scrollToSection('projects')" class="nav-mobile-link">Projects</button>
+                <button onclick="scrollToSection('contact')" class="nav-mobile-link">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-decorations">
+            <div class="hero-decoration hero-decoration-1"></div>
+            <div class="hero-decoration hero-decoration-2"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-avatar" style="overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=200&h=200&facepad=2&q=80" alt="Garvit Joshi AI Avatar" style="width:100px;height:100px;border-radius:50%;object-fit:cover;border:4px solid #fff;">
+            </div>
+            <h1 class="hero-name">Garvit Joshi</h1>
+            <p class="hero-title">Game Developer • App Developer • Web Developer</p>
+            <p class="hero-subtitle">9th Standard Student from India</p>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <i class="fas fa-trophy"></i>
+                    <span>10+ Published Apps</span>
+                </div>
+                <div class="hero-stat">
+                    <i class="fas fa-code"></i>
+                    <span>3+ Years Experience</span>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <button onclick="scrollToSection('projects')" class="btn btn-primary">View My Projects</button>
+                <a href="https://play.google.com/store/apps/dev?id=6617578849504571736" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <i class="fas fa-external-link-alt"></i>
+                    Play Store Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Passionate young developer from India, currently in 9th standard, with a strong foundation in multiple development domains.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="AI Workspace" style="width:220px;height:220px;border-radius:18px;object-fit:cover;box-shadow:0 4px 24px 0 rgba(99,102,241,0.10);">
+                </div>
+
+                <div class="about-text">
+                    <h3>My Journey</h3>
+                    <p>
+                        As a 9th standard student, I've been passionate about technology and development from an early age. 
+                        My journey started with game development, expanded into mobile apps, and now includes web development.
+                    </p>
+                    <p>
+                        I specialize in creating mobile applications using MIT App Inventor and Thunkable, with over 10 published apps 
+                        on the Google Play Store. My goal is to create innovative solutions that solve real-world problems.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Published Apps</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills & Experience</h2>
+                <p>My technical expertise across different development domains</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Game Development -->
+                <div class="skill-card">
+                    <div class="skill-image">
+                        <i class="fas fa-gamepad"></i>
+                        <p>Game Development Workspace</p>
+                    </div>
+                    
+                    <div class="skill-content">
+                        <div class="skill-header">
+                            <i class="fas fa-gamepad"></i>
+                            <h3>Game Development</h3>
+                        </div>
+                        <p>2 years of experience creating engaging games</p>
+                        
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-bar-header">
+                                    <span>Game Logic</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 85%" data-color="blue"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-header">
+                                    <span>Game Design</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 80%" data-color="blue"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag">Basic Concepts</span>
+                            <span class="skill-tag">Horror Games</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App Development -->
+                <div class="skill-card">
+                    <div class="skill-image">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p>App Development Workspace</p>
+                    </div>
+                    
+                    <div class="skill-content">
+                        <div class="skill-header">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>App Development</h3>
+                        </div>
+                        <p>3 years • 10+ published apps</p>
+                        
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-bar-header">
+                                    <span>MIT App Inventor</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 90%" data-color="emerald"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-header">
+                                    <span>Thunkable</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 85%" data-color="emerald"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag">MIT App Inventor</span>
+                            <span class="skill-tag">Thunkable</span>
+                            <span class="skill-tag highlight">10+ Apps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skill-card">
+                    <div class="skill-image">
+                        <i class="fas fa-code"></i>
+                        <p>Web Development Workspace</p>
+                    </div>
+                    
+                    <div class="skill-content">
+                        <div class="skill-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Web Development</h3>
+                        </div>
+                        <p>2 years of web development experience</p>
+                        
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-bar-header">
+                                    <span>HTML & CSS</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 85%" data-color="purple"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-header">
+                                    <span>JavaScript</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 75%" data-color="purple"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Timeline -->
+            <div class="timeline">
+                <h3>Experience Timeline</h3>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <h4>App Development</h4>
+                            <p>Started with MIT App Inventor</p>
+                            <span class="timeline-time">3 years ago</span>
+                        </div>
+                        <div class="timeline-dot timeline-emerald"></div>
+                    </div>
+
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-content">
+                            <h4>Game Development</h4>
+                            <p>Started creating horror games</p>
+                            <span class="timeline-time">2 years ago</span>
+                        </div>
+                        <div class="timeline-dot timeline-blue"></div>
+                    </div>
+
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <h4>Web Development</h4>
+                            <p>Learned HTML, CSS, JavaScript</p>
+                            <span class="timeline-time">2 years ago</span>
+                        </div>
+                        <div class="timeline-dot timeline-purple"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Projects</h2>
+                <p>Showcase of my best work across different platforms</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Harry Potter Quiz App -->
+                <div class="project-card">
+                    <div class="project-image project-blue-purple" style="padding:0;">
+                        <img src="https://play-lh.googleusercontent.com/3ODf_lvCo8Eysje35-KeYN-HpLR2dtFPh0uT3-0EBpyZ42i2hlpkh7pBWNMLDuDfup0W=w240-h480-rw" alt="Harry Potter Quiz AI" style="width:100%;height:110px;object-fit:cover;border-radius:12px 12px 0 0;">
+                    </div>
+                    
+                    <div class="project-content">
+                        <h3>Harry Potter Quiz App</h3>
+                        <p>Interactive quiz app for Harry Potter fans with multiple categories and scoring system.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag tag-blue">MIT App Inventor</span>
+                            <span class="project-tag tag-purple">Quiz App</span>
+                        </div>
+
+                        <div class="project-footer">
+                            <span class="project-metric">
+                                <i class="fas fa-download"></i>
+                                1k+ Downloads
+                            </span>
+                            <a href="https://play.google.com/store/apps/details?id=com.garvitjoshi.wizquiz" target="_blank" rel="noopener noreferrer" class="project-link">
+                                View Project 
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vimal: The Horror Game -->
+                <div class="project-card">
+                    <div class="project-image project-red-black" style="padding:0;">
+                        <img src="https://play-lh.googleusercontent.com/tD-piXwdhsGI5tbce6l7t-N02C5WAY3H_qULi63ZC8oWse_sU3zuHhmyy0Rmi8DUNPch=w240-h480-rw" alt="Vimal Horror Game AI" style="width:100%;height:110px;object-fit:cover;border-radius:12px 12px 0 0;">
+                    </div>
+                    
+                    <div class="project-content">
+                        <h3>Vimal: The Horror Game</h3>
+                        <p>Atmospheric horror game.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag tag-red">Game Development</span>
+                            <span class="project-tag tag-gray">Horror</span>
+                        </div>
+
+                        <div class="project-footer">
+                            <span class="project-metric">
+                                <i class="fas fa-star"></i>
+                                4.2 Rating
+                            </span>
+                            <a href="https://play.google.com/store/apps/details?id=com.Garvitcoder.VimalThehorrorgame" target="_blank" rel="noopener noreferrer" class="project-link">
+                                View Project 
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The OG Solver App -->
+                <div class="project-card">
+                    <div class="project-image project-emerald-teal" style="padding:0;">
+                        <img src="https://lh3.googleusercontent.com/gVGuLOOxwuoZpz7I6sBVayFFyO5kffXbCawhXqKFJwWwY5CNyrVUJsfMjqX9t5zBuhcOiBbiePGZfNe1KjXSBAs" alt="OG Solver AI" style="width:100%;height:110px;object-fit:cover;border-radius:12px 12px 0 0;">
+                    </div>
+                    
+                    <div class="project-content">
+                        <h3>The OG Solver App</h3>
+                        <p>Comprehensive calculator and problem-solving app for students and professionals.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag tag-emerald">Thunkable</span>
+                            <span class="project-tag tag-teal">Utility</span>
+                        </div>
+
+                        <div class="project-footer">
+                            <span class="project-metric">
+                                <i class="fas fa-download"></i>
+                                NEWLY LUNCHED
+                            </span>
+                            <a href="https://play.google.com/store/apps/details?id=com.ogsolver" target="_blank" rel="noopener noreferrer" class="project-link">
+                                View Project 
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Projects Button -->
+            <div class="projects-more">
+                <a href="https://play.google.com/store/apps/dev?id=6617578849504571736" target="_blank" rel="noopener noreferrer" class="btn btn-emerald">
+                    <i class="fas fa-external-link-alt"></i>
+                    View All Apps on Play Store
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Connect</h2>
+                <p>Interested in collaborating or have questions about my projects? Feel free to reach out!</p>
+            </div>
+
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <i class="fas fa-external-link-alt contact-icon emerald"></i>
+                    <h3>Play Store</h3>
+                    <p>Check out my published apps</p>
+                    <a href="https://play.google.com/store/apps/dev?id=6617578849504571736" target="_blank" rel="noopener noreferrer" class="contact-link emerald">
+                        View Profile
+                    </a>
+                </div>
+
+                <div class="contact-method">
+                    <i class="fas fa-envelope contact-icon blue"></i>
+                    <h3>Email</h3>
+                    <p>Send me a message</p>
+                    <a href="mailto:garvitjoshi121@gmail.com" class="contact-link blue">
+                        garvitjoshi121@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact-method">
+                    <i class="fas fa-map-marker-alt contact-icon purple"></i>
+                    <h3>Location</h3>
+                    <p>Based in</p>
+                    <span class="contact-link purple">India</span>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/Garvitjoshi17" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/garvit_joshi17?igsh=MWYwODFrNXh6bW1vMw==" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://play.google.com/store/apps/dev?id=6617578849504571736" target="_blank" rel="noopener noreferrer" class="social-link emerald">
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2024 Garvit Joshi. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <span>9th Standard Student</span>
+                    <span>•</span>
+                    <span>Made with ❤️ in India</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
